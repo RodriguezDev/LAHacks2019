@@ -12,6 +12,9 @@
 		A1582E21224F51E900206D5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1582E1F224F51E900206D5F /* Main.storyboard */; };
 		A1582E23224F51EA00206D5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1582E22224F51EA00206D5F /* Assets.xcassets */; };
 		A1582E26224F51EA00206D5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1582E24224F51EA00206D5F /* LaunchScreen.storyboard */; };
+		A1582E4E224FC79700206D5F /* LocatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1582E4D224FC79700206D5F /* LocatorViewController.swift */; };
+		A1582E50224FC81A00206D5F /* RegisterVehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1582E4F224FC81A00206D5F /* RegisterVehicleViewController.swift */; };
+		A1582E52224FC83500206D5F /* MaintenanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1582E51224FC83500206D5F /* MaintenanceViewController.swift */; };
 		CF1A6E8B0E440E38372831E8 /* Pods_LAHacks2019.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CBE4F00E0024E71341F055 /* Pods_LAHacks2019.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +28,9 @@
 		A1582E22224F51EA00206D5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1582E25224F51EA00206D5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1582E27224F51EA00206D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1582E4D224FC79700206D5F /* LocatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocatorViewController.swift; sourceTree = "<group>"; };
+		A1582E4F224FC81A00206D5F /* RegisterVehicleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVehicleViewController.swift; sourceTree = "<group>"; };
+		A1582E51224FC83500206D5F /* MaintenanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceViewController.swift; sourceTree = "<group>"; };
 		A30DD810E777840F45DB6CF7 /* Pods-LAHacks2019.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LAHacks2019.release.xcconfig"; path = "Pods/Target Support Files/Pods-LAHacks2019/Pods-LAHacks2019.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +78,9 @@
 			children = (
 				A1582E1B224F51E900206D5F /* AppDelegate.swift */,
 				A1582E1D224F51E900206D5F /* ViewController.swift */,
+				A1582E4D224FC79700206D5F /* LocatorViewController.swift */,
+				A1582E51224FC83500206D5F /* MaintenanceViewController.swift */,
+				A1582E4F224FC81A00206D5F /* RegisterVehicleViewController.swift */,
 				A1582E1F224F51E900206D5F /* Main.storyboard */,
 				A1582E22224F51EA00206D5F /* Assets.xcassets */,
 				A1582E24224F51EA00206D5F /* LaunchScreen.storyboard */,
@@ -214,8 +223,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1582E4E224FC79700206D5F /* LocatorViewController.swift in Sources */,
 				A1582E1E224F51E900206D5F /* ViewController.swift in Sources */,
+				A1582E50224FC81A00206D5F /* RegisterVehicleViewController.swift in Sources */,
 				A1582E1C224F51E900206D5F /* AppDelegate.swift in Sources */,
+				A1582E52224FC83500206D5F /* MaintenanceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

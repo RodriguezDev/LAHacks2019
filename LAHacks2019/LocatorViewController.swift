@@ -19,7 +19,10 @@ class LocatorViewController: UIViewController, CLLocationManagerDelegate {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
   }
-
+    @IBAction func navigateBack(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
   @IBAction func lockUnlockSwitch(_ sender: Any) {
     if lockUnlockLabel.text == "Unlocked" {
       lockUnlockLabel.text = "Locked"

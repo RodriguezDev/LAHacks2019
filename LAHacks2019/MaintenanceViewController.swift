@@ -13,7 +13,10 @@ class MaintenanceViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-  
+    @IBAction func navigateBack(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

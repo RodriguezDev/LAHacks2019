@@ -280,7 +280,7 @@
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
                                 <state key="normal" title="Locate"/>
                                 <connections>
-                                    <action selector="Locate:" destination="ZhW-Ig-ysr" eventType="touchUpInside" id="p1R-Fs-8K2"/>
+                                    <action selector="locate:" destination="ZhW-Ig-ysr" eventType="touchUpInside" id="21N-FG-z9b"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="rC5-pd-Cod">
@@ -302,7 +302,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mdb-Gy-b1Y">
-                                <rect key="frame" x="153" y="821" width="109" height="51"/>
+                                <rect key="frame" x="153" y="804" width="109" height="51"/>
                                 <color key="backgroundColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="och-kP-SKJ"/>
@@ -311,9 +311,6 @@
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Back"/>
-                                <connections>
-                                    <action selector="Locate:" destination="ZhW-Ig-ysr" eventType="touchUpInside" id="nwC-ds-NKN"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -332,8 +329,8 @@
                         <viewLayoutGuide key="safeArea" id="9e5-5d-fmX"/>
                     </view>
                     <connections>
-                        <outlet property="Map" destination="lIz-tq-52i" id="oYa-lN-zc7"/>
                         <outlet property="lockUnlockLabel" destination="RoR-k4-YLY" id="xbf-f9-BhD"/>
+                        <outlet property="map" destination="lIz-tq-52i" id="trp-Nh-WSH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xid-oK-IJG" userLabel="First Responder" sceneMemberID="firstResponder"/>

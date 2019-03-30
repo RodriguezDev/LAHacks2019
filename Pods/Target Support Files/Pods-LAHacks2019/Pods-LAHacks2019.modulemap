@@ -1,0 +1,6 @@
+framework module Pods_LAHacks2019 {
+  umbrella header "Pods-LAHacks2019-umbrella.h"
+
+  export *
+  module * { export * }
+}

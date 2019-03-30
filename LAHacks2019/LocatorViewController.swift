@@ -10,29 +10,20 @@ import UIKit
 import MapKit
 
 class LocatorViewController: UIViewController {
-    
     @IBOutlet weak var lockUnlockLabel: UILabel!
-    
     @IBOutlet weak var Map: MKMapView!
-    
-    
-
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-
         // Do any additional setup after loading the view.
     }
-    
     
     @IBAction func lockUnlockSwitch(_ sender: Any) {
         lockUnlockLabel.text = "Hello there"
     }
     
     @IBAction func Locate(_ sender: Any) {
-        
-        
+      
     }
     
     /*
@@ -44,5 +35,4 @@ class LocatorViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

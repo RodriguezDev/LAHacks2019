@@ -9,26 +9,20 @@
 import UIKit
 
 class RegisterVehicleViewController: UIViewController {
-    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var serialTextField: UITextField!
     @IBOutlet weak var colorTextField: UITextField!
     @IBOutlet weak var valueTextField: UITextField!
-    
     @IBOutlet weak var vehiclePickerView: UIPickerView!
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
     @IBAction func saveVehicle(_ sender: Any) {
     }
-    
-    
-
+  
     /*
     // MARK: - Navigation
 
@@ -38,5 +32,4 @@ class RegisterVehicleViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

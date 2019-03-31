@@ -16,12 +16,12 @@ class Vehicle {
     let color: String
     let val: String
     let type: String
-    let lon: Int
-    let lat: Int
+    let lon: NSNumber
+    let lat: NSNumber
     let locked: Int
     let ref: DatabaseReference
     
-    init(newName: String, newSerial: String, newColor: String, newValue: String, newType: String, newLon: Int, newLat: Int, newLock: Int) {
+    init(newName: String, newSerial: String, newColor: String, newValue: String, newType: String, newLon: NSNumber, newLat: NSNumber, newLock: Int) {
         name = newName
         serial = newSerial
         color = newColor
@@ -41,8 +41,8 @@ class Vehicle {
         color = value["color"] as! String
         val = value["value"] as! String
         type = value["type"] as! String
-        lon = value["lon"] as! Int
-        lat = value["lat"] as! Int
+        lon = value["lon"] as! NSNumber
+        lat = value["lat"] as! NSNumber
         locked = value["locked"] as! Int
     }
 }

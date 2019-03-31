@@ -13,6 +13,7 @@ import Firebase
 class LocatorViewController: UIViewController, CLLocationManagerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
     var listItems: [Vehicle] = [Vehicle]()
+    var databaseRef: DatabaseReference!
     let locationManager = CLLocationManager()
   
     
@@ -24,6 +25,8 @@ class LocatorViewController: UIViewController, CLLocationManagerDelegate, UIPick
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        databaseRef = Database.database().reference()
         
         Database.database().reference().child("Users/\(Auth.auth().currentUser!.uid)/Vehicles").observeSingleEvent(of: .value) { (snapshot) in
             for child in snapshot.children {
@@ -54,9 +57,25 @@ class LocatorViewController: UIViewController, CLLocationManagerDelegate, UIPick
     
     @IBAction func lockUnlockSwitch(_ sender: Any) {
         if lockUnlockLabel.text == "Unlocked" {
+            
             lockUnlockLabel.text = "Locked"
+            
             if listItems.count > 0 {
                 listItems[vehiclePicker.selectedRow(inComponent: 0)].ref.child("locked").setValue(0)
+            }
+            
+            // Update location in database. Park implied.
+            if !CLLocationManager.locationServicesEnabled() {
+                print("No services enabled")
+                return
+            }
+            if CLLocationManager.locationServicesEnabled() {
+                print("User accepted")
+                locationManager.requestAlwaysAuthorization()
+                locationManager.delegate = self
+                locationManager.desiredAccuracy = kCLLocationAccuracyBest
+                locationManager.startUpdatingLocation()
+                map.showsUserLocation = true
             }
         } else {
             lockUnlockLabel.text = "Unlocked"
@@ -67,22 +86,16 @@ class LocatorViewController: UIViewController, CLLocationManagerDelegate, UIPick
     }
     
     @IBAction func locate(_ sender: Any) {
-        // If no location services are enabled, prompt user to enable it.
-        if !CLLocationManager.locationServicesEnabled() {
-            print("No services enabled")
-            return
-        }
+        
+        let vehicle = listItems[vehiclePicker.selectedRow(inComponent: 0)]
+        print("\(vehicle.lat)")
+        
+        let coordinations = CLLocationCoordinate2D(latitude: CLLocationDegrees(vehicle.lat),longitude: CLLocationDegrees(vehicle.lon))
+        let span = MKCoordinateSpan.init(latitudeDelta: 0.2, longitudeDelta: 0.2)
+        let region = MKCoordinateRegion(center: coordinations, span: span)
+        map.setRegion(region, animated: true)
+        map.showsUserLocation = true
     
-        // If user still did not enable location services, skip following loop.
-        if CLLocationManager.locationServicesEnabled() {
-          print("User accepted")
-          locationManager.requestAlwaysAuthorization()
-          locationManager.delegate = self
-          locationManager.desiredAccuracy = kCLLocationAccuracyBest
-          locationManager.startUpdatingLocation()
-          
-          map.showsUserLocation = true
-        }
     }
   
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -93,6 +106,11 @@ class LocatorViewController: UIViewController, CLLocationManagerDelegate, UIPick
         let coordinations = CLLocationCoordinate2D(latitude: userLocation.coordinate.latitude,longitude: userLocation.coordinate.longitude)
         let span = MKCoordinateSpan.init(latitudeDelta: 0.2, longitudeDelta: 0.2)
         let region = MKCoordinateRegion(center: coordinations, span: span)
+        
+        if listItems.count > 0 {
+            listItems[vehiclePicker.selectedRow(inComponent: 0)].ref.child("lat").setValue(userLocation.coordinate.latitude)
+            listItems[vehiclePicker.selectedRow(inComponent: 0)].ref.child("lon").setValue(userLocation.coordinate.longitude)
+        }
         
         map.setRegion(region, animated: true)
     }

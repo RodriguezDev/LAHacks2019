@@ -7,10 +7,24 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var welcomeLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        welcomeLabel.text = "Welcome back, "+(Auth.auth().currentUser?.email!)!
+    }
+
+    @IBAction func logOut(_ sender: Any) {
+        do{
+            try Auth.auth().signOut()
+            self.dismiss(animated: true, completion: nil)
+        }catch let e{
+            print(e)
+        }
     }
 }

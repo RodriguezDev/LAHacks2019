@@ -37,7 +37,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ufp-qB-GJd">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="chris@chris.com" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ufp-qB-GJd">
                                 <rect key="frame" x="20" y="411" width="374" height="37"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
@@ -49,7 +49,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q4P-y4-Nem">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="111111" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q4P-y4-Nem">
                                 <rect key="frame" x="20" y="498" width="374" height="37"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>

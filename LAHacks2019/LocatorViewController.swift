@@ -88,7 +88,6 @@ class LocatorViewController: UIViewController, CLLocationManagerDelegate, UIPick
     @IBAction func locate(_ sender: Any) {
         
         let vehicle = listItems[vehiclePicker.selectedRow(inComponent: 0)]
-        print("\(vehicle.lat)")
         
         let coordinations = CLLocationCoordinate2D(latitude: CLLocationDegrees(vehicle.lat),longitude: CLLocationDegrees(vehicle.lon))
         let span = MKCoordinateSpan.init(latitudeDelta: 0.2, longitudeDelta: 0.2)

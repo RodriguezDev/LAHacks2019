@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="sJh-pr-QgG">
             <objects>
-                <viewController id="nl9-wt-ceJ" sceneMemberID="viewController">
+                <viewController id="nl9-wt-ceJ" customClass="LoginViewController" customModule="LAHacks2019" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XhV-PE-4uJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,7 +67,7 @@
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="crossDissolve" id="x60-ds-jyd"/>
+                                    <action selector="login:" destination="nl9-wt-ceJ" eventType="touchUpInside" id="S8r-VS-Ftw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -92,6 +92,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mQr-4N-K14"/>
                     </view>
+                    <connections>
+                        <outlet property="pswd" destination="Q4P-y4-Nem" id="jTx-h3-FMo"/>
+                        <outlet property="userName" destination="Ufp-qB-GJd" id="vw8-aN-ElW"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="loggedIn" id="176-gc-Hha"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ast-eh-6ia" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

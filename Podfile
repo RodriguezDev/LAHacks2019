@@ -10,6 +10,4 @@ target 'LAHacks2019' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
-  pod "SmartcarAuth"
-  pod 'Alamofire', '~> 4.7'
 end

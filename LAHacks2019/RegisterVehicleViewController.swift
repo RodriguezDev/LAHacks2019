@@ -29,7 +29,7 @@ class RegisterVehicleViewController: UIViewController, UIPickerViewDataSource, U
         self.vehiclePickerView.dataSource = self
         
         //currentUser = Auth.auth().currentUser!
-        vehicles = ["Automobiles", "Boat", "Bicycle", "Motorcycle", "ATV"]
+        vehicles = ["Automobile", "Boat", "Bicycle", "Motorcycle", "ATV"]
     }
     @IBAction func navigateBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -40,10 +40,12 @@ class RegisterVehicleViewController: UIViewController, UIPickerViewDataSource, U
         let serial = serialTextField.text!
         let color = colorTextField.text!
         let value = valueTextField.text!
-        
+        let type = self.pickerView(self.vehiclePickerView, titleForRow: self.vehiclePickerView.selectedRow(inComponent: 0), forComponent: 0) as! String
+
         if name.count > 0 && serial.count > 0 && color.count > 0 && value.count > 0 {
-            let vehicle = Vehicle(newName: name, newSerial: serial, newColor: color, newValue: value )
-            //Database.database().reference().child("Users/\(currentUser.uid)").setValue(vehicle)
+            
+            Database.database().reference().child("Users/userA/Vehicles").childByAutoId().setValue(["vehicleName": name, "serial": serial, "color": color, "value": value, "type": type, "lat": 1, "lon": 1, "locked": 0])
+            dismiss(animated: true, completion: nil)
         }
     }
     
@@ -58,14 +60,4 @@ class RegisterVehicleViewController: UIViewController, UIPickerViewDataSource, U
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return vehicles[row]
     }
-  
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }

@@ -8,10 +8,11 @@
 
 import UIKit
 import MapKit
+import Firebase
 
 class LocatorViewController: UIViewController, CLLocationManagerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    var listItems: [String] = [String]()
+    var listItems: [Vehicle] = [Vehicle]()
   let locationManager = CLLocationManager()
   
     
@@ -22,7 +23,16 @@ class LocatorViewController: UIViewController, CLLocationManagerDelegate, UIPick
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
-    listItems = ["Mercedes", "Honda", "Volkswagen", "BMW", "Audi"]
+    
+    Database.database().reference().child("Users/userA/Vehicles").observeSingleEvent(of: .value) { (snapshot) in
+        for child in snapshot.children {
+            let childSnapshot = child as! DataSnapshot
+            self.listItems.append(Vehicle(snapshot: childSnapshot))
+            print("Item found")
+        }
+        self.vehiclePicker.reloadAllComponents();
+    }
+    
     self.vehiclePicker.delegate = self
     self.vehiclePicker.dataSource = self
   }
@@ -78,7 +88,8 @@ class LocatorViewController: UIViewController, CLLocationManagerDelegate, UIPick
     }
   
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return listItems[row]
+        return listItems[row].name + ": " + listItems[row].type
+        
     }
   /*
     // MARK: - Navigation

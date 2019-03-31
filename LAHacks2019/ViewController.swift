@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        welcomeLabel.text = "Welcome back, "+(Auth.auth().currentUser?.email!)!
+        welcomeLabel.text = "Welcome back, " + (Auth.auth().currentUser?.email!)!
     }
 
     @IBAction func logOut(_ sender: Any) {

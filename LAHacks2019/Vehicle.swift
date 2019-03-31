@@ -19,6 +19,7 @@ class Vehicle {
     let lon: Int
     let lat: Int
     let locked: Int
+    let ref: DatabaseReference
     
     init(newName: String, newSerial: String, newColor: String, newValue: String, newType: String, newLon: Int, newLat: Int, newLock: Int) {
         name = newName
@@ -29,9 +30,10 @@ class Vehicle {
         lon = newLon
         lat = newLat
         locked = newLock
+        ref = Database.database().reference()
     }
     init(snapshot: DataSnapshot) {
-        //ref = snapshot.ref
+        ref = snapshot.ref
         let value = snapshot.value as! [String: Any]
         
         name = value["vehicleName"] as! String

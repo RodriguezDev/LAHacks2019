@@ -117,7 +117,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ZW-zD-m7I">
-                                <rect key="frame" x="87" y="507" width="240" height="70"/>
+                                <rect key="frame" x="87" y="506.5" width="240" height="70"/>
                                 <color key="backgroundColor" red="0.92020184279999995" green="0.92020184279999995" blue="0.92020184279999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="Qc2-lZ-AJg"/>
@@ -132,7 +132,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gk1-Ru-b0j">
-                                <rect key="frame" x="87" y="412" width="240" height="70"/>
+                                <rect key="frame" x="87" y="411.5" width="240" height="70"/>
                                 <color key="backgroundColor" red="0.9202018427848816" green="0.9202018427848816" blue="0.9202018427848816" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="2eb-nd-hNx"/>
@@ -153,8 +153,8 @@
                                     <constraint firstAttribute="width" secondItem="ZpH-CT-8fE" secondAttribute="height" multiplier="15:8" id="yMv-oa-46Q"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back, USER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53A-B1-EkD">
-                                <rect key="frame" x="109.5" y="334" width="195" height="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back, USER" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53A-B1-EkD">
+                                <rect key="frame" x="8" y="334" width="398" height="27.5"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -163,7 +163,7 @@
                                 <rect key="frame" x="305" y="64" width="69" height="40"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                 <state key="normal" title="Logout">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="logOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ODS-L3-mlz"/>
@@ -184,6 +184,8 @@
                             <constraint firstItem="ZpH-CT-8fE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mLQ-Gq-PlS"/>
                             <constraint firstItem="6Wm-B5-aya" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="sBM-fK-Tip"/>
                             <constraint firstItem="gk1-Ru-b0j" firstAttribute="top" secondItem="53A-B1-EkD" secondAttribute="bottom" constant="50" id="sm3-zR-o0e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="53A-B1-EkD" secondAttribute="trailing" constant="8" id="su1-LC-cXn"/>
+                            <constraint firstItem="53A-B1-EkD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="y5y-gP-NpB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -353,7 +355,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRe-Ax-BiF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="983" y="-319"/>
+            <point key="canvasLocation" x="983" y="377"/>
         </scene>
         <!--Locator View Controller-->
         <scene sceneID="FkY-hV-6Rd">
@@ -461,12 +463,13 @@
                     <connections>
                         <outlet property="lockUnlockLabel" destination="RoR-k4-YLY" id="xbf-f9-BhD"/>
                         <outlet property="map" destination="lIz-tq-52i" id="trp-Nh-WSH"/>
+                        <outlet property="switchOutlet" destination="XOW-Mf-Kmz" id="qTb-2U-keJ"/>
                         <outlet property="vehiclePicker" destination="5XK-fm-NkF" id="KXw-ZI-Mlz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xid-oK-IJG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="982.60869565217399" y="-970.3125"/>
+            <point key="canvasLocation" x="983" y="-354"/>
         </scene>
     </scenes>
     <resources>

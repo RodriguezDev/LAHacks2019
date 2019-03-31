@@ -9,15 +9,22 @@
 import UIKit
 import MapKit
 
-class LocatorViewController: UIViewController, CLLocationManagerDelegate {
+class LocatorViewController: UIViewController, CLLocationManagerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    var listItems: [String] = [String]()
   let locationManager = CLLocationManager()
   
-  @IBOutlet weak var lockUnlockLabel: UILabel!
+    
+    @IBOutlet weak var vehiclePicker: UIPickerView!
+    @IBOutlet weak var lockUnlockLabel: UILabel!
   @IBOutlet weak var map: MKMapView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
+    listItems = ["Mercedes", "Honda", "Volkswagen", "BMW", "Audi"]
+    self.vehiclePicker.delegate = self
+    self.vehiclePicker.dataSource = self
   }
     @IBAction func navigateBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -61,7 +68,18 @@ class LocatorViewController: UIViewController, CLLocationManagerDelegate {
     
     map.setRegion(region, animated: true)
   }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return listItems.count
+    }
   
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return listItems[row]
+    }
   /*
     // MARK: - Navigation
 

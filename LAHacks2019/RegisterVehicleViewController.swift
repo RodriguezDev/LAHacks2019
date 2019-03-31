@@ -28,7 +28,7 @@ class RegisterVehicleViewController: UIViewController, UIPickerViewDataSource, U
         self.vehiclePickerView.delegate = self
         self.vehiclePickerView.dataSource = self
         
-        currentUser = Auth.auth().currentUser!
+        //currentUser = Auth.auth().currentUser!
         vehicles = ["Automobiles", "Boat", "Bicycle", "Motorcycle", "ATV"]
     }
     @IBAction func navigateBack(_ sender: Any) {
@@ -43,7 +43,7 @@ class RegisterVehicleViewController: UIViewController, UIPickerViewDataSource, U
         
         if name.count > 0 && serial.count > 0 && color.count > 0 && value.count > 0 {
             let vehicle = Vehicle(newName: name, newSerial: serial, newColor: color, newValue: value )
-            Database.database().reference().child("Users/\(currentUser.uid)").setValue(vehicle)
+            //Database.database().reference().child("Users/\(currentUser.uid)").setValue(vehicle)
         }
     }
     

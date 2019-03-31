@@ -16,6 +16,8 @@
 		A1582E4E224FC79700206D5F /* LocatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1582E4D224FC79700206D5F /* LocatorViewController.swift */; };
 		A1582E50224FC81A00206D5F /* RegisterVehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1582E4F224FC81A00206D5F /* RegisterVehicleViewController.swift */; };
 		A1582E52224FC83500206D5F /* MaintenanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1582E51224FC83500206D5F /* MaintenanceViewController.swift */; };
+		A16E95DD2250715200C2B19A /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16E95DC2250715200C2B19A /* Vehicle.swift */; };
+		A16E95DF22508B7E00C2B19A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A16E95DE22508B7E00C2B19A /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		A1582E4D224FC79700206D5F /* LocatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocatorViewController.swift; sourceTree = "<group>"; };
 		A1582E4F224FC81A00206D5F /* RegisterVehicleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVehicleViewController.swift; sourceTree = "<group>"; };
 		A1582E51224FC83500206D5F /* MaintenanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceViewController.swift; sourceTree = "<group>"; };
+		A16E95DC2250715200C2B19A /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		A16E95DE22508B7E00C2B19A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +56,6 @@
 				049E4E4BCB8837858E486456 /* Pods-LAHacks2019.debug.xcconfig */,
 				370C97678EA2A74226B595CD /* Pods-LAHacks2019.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -90,10 +93,12 @@
 				A1582E4D224FC79700206D5F /* LocatorViewController.swift */,
 				A1582E51224FC83500206D5F /* MaintenanceViewController.swift */,
 				A1582E4F224FC81A00206D5F /* RegisterVehicleViewController.swift */,
+				A16E95DC2250715200C2B19A /* Vehicle.swift */,
 				A1582E1F224F51E900206D5F /* Main.storyboard */,
 				A1582E22224F51EA00206D5F /* Assets.xcassets */,
 				A1582E24224F51EA00206D5F /* LaunchScreen.storyboard */,
 				A1582E27224F51EA00206D5F /* Info.plist */,
+				A16E95DE22508B7E00C2B19A /* GoogleService-Info.plist */,
 			);
 			path = LAHacks2019;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1582E26224F51EA00206D5F /* LaunchScreen.storyboard in Resources */,
+				A16E95DF22508B7E00C2B19A /* GoogleService-Info.plist in Resources */,
 				A1582E23224F51EA00206D5F /* Assets.xcassets in Resources */,
 				A1582E21224F51E900206D5F /* Main.storyboard in Resources */,
 			);
@@ -224,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A16E95DD2250715200C2B19A /* Vehicle.swift in Sources */,
 				A1582E4E224FC79700206D5F /* LocatorViewController.swift in Sources */,
 				A1582E1E224F51E900206D5F /* ViewController.swift in Sources */,
 				A1582E50224FC81A00206D5F /* RegisterVehicleViewController.swift in Sources */,

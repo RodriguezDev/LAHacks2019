@@ -18,62 +18,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BIK3R" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wO5-hy-CxV">
-                                <rect key="frame" x="160" y="56" width="94" height="44.5"/>
-                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find my Whip" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wO5-hy-CxV">
+                                <rect key="frame" x="55.5" y="280" width="303" height="66"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="48"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ZW-zD-m7I">
-                                <rect key="frame" x="82" y="375.5" width="250" height="80"/>
-                                <color key="backgroundColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="87" y="532" width="240" height="70"/>
+                                <color key="backgroundColor" red="0.92020184279999995" green="0.92020184279999995" blue="0.92020184279999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="Qc2-lZ-AJg"/>
-                                    <constraint firstAttribute="height" constant="80" id="uZ4-Bp-2X6"/>
+                                    <constraint firstAttribute="width" constant="240" id="Qc2-lZ-AJg"/>
+                                    <constraint firstAttribute="height" constant="70" id="uZ4-Bp-2X6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
-                                <state key="normal" title="Register"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="Xif-lw-urP" kind="show" id="Sh7-gY-Kqs"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHU-Va-I87">
-                                <rect key="frame" x="82" y="530.5" width="250" height="80"/>
-                                <color key="backgroundColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="dIf-mJ-KTG"/>
-                                    <constraint firstAttribute="height" constant="80" id="mxU-B2-9FK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
-                                <state key="normal" title="Service"/>
-                                <connections>
-                                    <segue destination="VdK-KA-WsO" kind="show" id="oSp-57-o8k"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gk1-Ru-b0j">
-                                <rect key="frame" x="82" y="220.5" width="250" height="80"/>
-                                <color key="backgroundColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="87" y="432" width="240" height="70"/>
+                                <color key="backgroundColor" red="0.9202018427848816" green="0.9202018427848816" blue="0.9202018427848816" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="2eb-nd-hNx"/>
-                                    <constraint firstAttribute="height" constant="80" id="Fuy-YG-cyM"/>
+                                    <constraint firstAttribute="width" constant="240" id="2eb-nd-hNx"/>
+                                    <constraint firstAttribute="height" constant="70" id="Fuy-YG-cyM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
-                                <state key="normal" title="Find"/>
+                                <state key="normal" title="Find">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="ZhW-Ig-ysr" kind="show" id="tdi-o5-Hl8"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bike" translatesAutoresizingMaskIntoConstraints="NO" id="ZpH-CT-8fE">
+                                <rect key="frame" x="87" y="144" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="RVp-oQ-irH"/>
+                                    <constraint firstAttribute="width" secondItem="ZpH-CT-8fE" secondAttribute="height" multiplier="15:8" id="yMv-oa-46Q"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back, Chris" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53A-B1-EkD">
+                                <rect key="frame" x="111" y="354" width="192" height="28"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHU-Va-I87">
+                                <rect key="frame" x="87" y="632" width="240" height="70"/>
+                                <color key="backgroundColor" red="0.92020184279999995" green="0.92020184279999995" blue="0.92020184279999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="dIf-mJ-KTG"/>
+                                    <constraint firstAttribute="height" constant="70" id="mxU-B2-9FK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <state key="normal" title="Service">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="VdK-KA-WsO" kind="show" id="oSp-57-o8k"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="0ZW-zD-m7I" firstAttribute="top" secondItem="gk1-Ru-b0j" secondAttribute="bottom" constant="75" id="3OO-FM-8Wt"/>
                             <constraint firstItem="0ZW-zD-m7I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hak-eG-fzQ"/>
                             <constraint firstItem="gk1-Ru-b0j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kbr-rz-20D"/>
-                            <constraint firstItem="gk1-Ru-b0j" firstAttribute="top" secondItem="wO5-hy-CxV" secondAttribute="bottom" constant="120" id="Q0K-DH-8JP"/>
                             <constraint firstItem="dHU-Va-I87" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rj4-bn-RIe"/>
-                            <constraint firstItem="wO5-hy-CxV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="XqM-qw-Jng"/>
-                            <constraint firstItem="dHU-Va-I87" firstAttribute="top" secondItem="0ZW-zD-m7I" secondAttribute="bottom" constant="75" id="aOl-ic-KUr"/>
+                            <constraint firstItem="53A-B1-EkD" firstAttribute="top" secondItem="wO5-hy-CxV" secondAttribute="bottom" constant="8" id="VJz-pc-a6Z"/>
+                            <constraint firstItem="ZpH-CT-8fE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="Vbs-6J-ZBH"/>
+                            <constraint firstItem="wO5-hy-CxV" firstAttribute="top" secondItem="ZpH-CT-8fE" secondAttribute="bottom" constant="8" id="X4D-tl-pqy"/>
+                            <constraint firstItem="53A-B1-EkD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YYE-rr-9Va"/>
+                            <constraint firstItem="0ZW-zD-m7I" firstAttribute="top" secondItem="gk1-Ru-b0j" secondAttribute="bottom" constant="30" id="dAo-Cn-cca"/>
                             <constraint firstItem="wO5-hy-CxV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ddu-Fj-m9y"/>
+                            <constraint firstItem="ZpH-CT-8fE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mLQ-Gq-PlS"/>
+                            <constraint firstItem="gk1-Ru-b0j" firstAttribute="top" secondItem="53A-B1-EkD" secondAttribute="bottom" constant="50" id="sm3-zR-o0e"/>
+                            <constraint firstItem="dHU-Va-I87" firstAttribute="top" secondItem="0ZW-zD-m7I" secondAttribute="bottom" constant="30" id="vw3-g2-s7s"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -337,4 +360,7 @@
             <point key="canvasLocation" x="982.60869565217399" y="-970.3125"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bike" width="1200" height="630"/>
+    </resources>
 </document>
